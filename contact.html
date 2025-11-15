@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Lucky Stars Casino</title>
+    <title>Contact Us - Social Casino Games Place</title>
     <style>
         * {
             margin: 0;
@@ -75,12 +75,20 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, var(--gold), #FFD700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .logo:focus-visible {
+            outline: 2px dashed var(--gold);
+            outline-offset: 4px;
         }
 
         .nav-menu {
@@ -533,15 +541,16 @@
             transform: translateY(-2px);
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--purple);
-            color: var(--text-light);
-            width: 100%;
-            box-sizing: border-box;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        
+        .footer-bottom a {
+            color: #fde68a;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom a:hover {
+            color: #fef3c7;
         }
 
         .footer-bottom p {
@@ -673,6 +682,10 @@
         }
 
         @media (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
             footer {
                 padding: 1.5rem 0.5rem 1rem;
             }
@@ -722,29 +735,290 @@
                 padding: 1.5rem;
             }
 
-            .logo {
-                font-size: 1.4rem;
+            .logo img {
+                height: 50px;
             }
-        }
+            }
 
         @media (max-width: 480px) {
             .section-title {
                 font-size: 1.8rem;
             }
         }
-    </style>
+    .icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: rgba(107, 70, 193, 0.22);
+    border: 2px solid rgba(245, 158, 11, 0.4);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.28);
+    color: var(--gold);
+    margin: 0 auto 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-badge svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    display: block;
+}
+
+.icon-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(245, 158, 11, 0.28);
+}
+
+.info-item .icon-badge {
+    width: 56px;
+    height: 56px;
+    margin: 0 1rem 0 0;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
+
+.tier-icon.icon-badge,
+.loyalty-icon.icon-badge,
+.reward-icon.icon-badge {
+    margin: 0 auto 1rem;
+}
+
+.tier-icon[data-tier="bronze"] { color: #b45309; }
+.tier-icon[data-tier="silver"] { color: #9ca3af; }
+.tier-icon[data-tier="gold"] { color: #fbbf24; }
+.tier-icon[data-tier="platinum"] { color: #60a5fa; }
+.tier-icon[data-tier="diamond"] { color: #38bdf8; }
+
+.list-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: rgba(107, 70, 193, 0.25);
+    color: var(--gold);
+    margin-right: 0.6rem;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+
+.list-bullet svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    display: block;
+}
+
+    
+        .list-bullet.bronze { color: #b45309; }
+        .list-bullet.silver { color: #9ca3af; }
+        .list-bullet.gold { color: #fbbf24; }
+        .list-bullet.platinum { color: #60a5fa; }
+        .list-bullet.diamond { color: #38bdf8; }
+</style>
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="icon-gift" viewBox="0 0 24 24">
+    <rect x="3.5" y="10" width="17" height="11" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M3.5 14h17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M12 10v11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M9.75 4.5c1.24 0 2.25 1.01 2.25 2.25V10h-2.5c-1.24 0-2.25-1.01-2.25-2.25S8.51 4.5 9.75 4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M14.25 4.5C13.01 4.5 12 5.51 12 6.75V10h2.5c1.24 0 2.25-1.01 2.25-2.25S15.49 4.5 14.25 4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-slot" viewBox="0 0 24 24">
+    <rect x="3.5" y="5.5" width="17" height="13" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <rect x="6.5" y="9" width="3.8" height="5.2" rx="1.1" fill="none" stroke="currentColor" stroke-width="1.2" />
+    <rect x="10.9" y="9" width="3.8" height="5.2" rx="1.1" fill="none" stroke="currentColor" stroke-width="1.2" />
+    <rect x="15.3" y="9" width="3.8" height="5.2" rx="1.1" fill="none" stroke="currentColor" stroke-width="1.2" />
+    <path d="M20.5 7l1.6-1.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <circle cx="22.3" cy="5.2" r="0.9" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-coins" viewBox="0 0 24 24">
+    <ellipse cx="12" cy="6.5" rx="6.5" ry="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M5.5 6.5v5c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5v-5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M5.5 11.5v5c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5v-5" fill="none" stroke="currentColor" stroke-width="1.6" />
+  </symbol>
+  <symbol id="icon-trophy" viewBox="0 0 24 24">
+    <path d="M7 4h10v4a5 5 0 0 1-3.5 4.77V15h2.5a1 1 0 0 1 1 1v1.5H7V16a1 1 0 0 1 1-1h2.5v-2.23A5 5 0 0 1 7 8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M5 5.5h2V8a3 3 0 0 1-3 3H3.5A2.5 2.5 0 0 1 1 8.5v-1A2 2 0 0 1 3 5.5h2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+    <path d="M19 5.5h2A2 2 0 0 1 23 7.5v1a2.5 2.5 0 0 1-2.5 2.5H20a3 3 0 0 1-3-3V5.5h2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24">
+    <path d="M12 3.4l2.4 4.86 5.37.78-3.88 3.78.92 5.35L12 15.9l-4.81 2.47.92-5.35-3.88-3.78 5.37-.78Z" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="12" r="2" fill="currentColor" />
+    <path d="M12 3v2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M21 12h-2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M12 21v-2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M3 12h2.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24">
+    <rect x="5" y="10" width="14" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M8 10V7a4 4 0 1 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <circle cx="12" cy="15.5" r="1.3" fill="currentColor" />
+    <path d="M12 16.8v1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-wheel" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="12" r="2" fill="currentColor" />
+    <path d="M12 3.5v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M12 16.5v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M20.5 12h-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M3.5 12h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M17.66 6.34l-2.83 2.83" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M6.34 17.66l2.83-2.83" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M6.34 6.34l2.83 2.83" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M17.66 17.66l-2.83-2.83" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M7 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M17 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M3 9.5h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <circle cx="8.5" cy="13.5" r="1" fill="currentColor" />
+    <circle cx="12" cy="13.5" r="1" fill="currentColor" />
+    <circle cx="15.5" cy="13.5" r="1" fill="currentColor" />
+    <circle cx="8.5" cy="17.5" r="1" fill="currentColor" />
+    <circle cx="12" cy="17.5" r="1" fill="currentColor" />
+    <circle cx="15.5" cy="17.5" r="1" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-confetti" viewBox="0 0 24 24">
+    <path d="M4.5 19.5 8.2 8.2 19.5 4.5 8.9 15.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M9.8 6.2c.9-.9 2.4-.9 3.3 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M15.4 8.6c.7-.7 1.8-.7 2.5 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M11.9 11.8c.6-.6 1.6-.6 2.2 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-diamond" viewBox="0 0 24 24">
+    <path d="M12 3.5 20.5 9l-8.5 11-8.5-11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M7.5 9 12 3.5 16.5 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M12 3.5V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-crown" viewBox="0 0 24 24">
+    <path d="M3.5 18.5h17l-1.5-7-4.5 3.5-3-7-3 7-4.5-3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M6 18.5v1.5h12V18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <circle cx="5" cy="6.5" r="1.2" fill="currentColor" />
+    <circle cx="12" cy="5" r="1.5" fill="currentColor" />
+    <circle cx="19" cy="6.5" r="1.2" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-medal" viewBox="0 0 24 24">
+    <circle cx="12" cy="9" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M9 14.5 7 21l5-2.5 5 2.5-2-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-controller" viewBox="0 0 24 24">
+    <rect x="3" y="8" width="18" height="9.5" rx="4" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M8.5 12h-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M7 10.5v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <circle cx="16.5" cy="11.5" r="1" fill="currentColor" />
+    <circle cx="18.5" cy="13.5" r="1" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-dice" viewBox="0 0 24 24">
+    <rect x="4.5" y="4.5" width="15" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="9.5" cy="9.5" r="1.1" fill="currentColor" />
+    <circle cx="14.5" cy="9.5" r="1.1" fill="currentColor" />
+    <circle cx="9.5" cy="14.5" r="1.1" fill="currentColor" />
+    <circle cx="14.5" cy="14.5" r="1.1" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <ellipse cx="12" cy="12" rx="4.5" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.4" />
+    <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.4" />
+    <path d="M12 3.5v17" stroke="currentColor" stroke-width="1.4" />
+  </symbol>
+  <symbol id="icon-info" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="8" r="1.2" fill="currentColor" />
+    <path d="M12 11v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24">
+    <rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-network" viewBox="0 0 24 24">
+    <circle cx="7" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <circle cx="17" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <circle cx="12" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <path d="M9 8.8 10.8 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M15 8.8 13.2 14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-location" viewBox="0 0 24 24">
+    <path d="M12 21s-6-6.2-6-10.5a6 6 0 1 1 12 0C18 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <circle cx="12" cy="10.5" r="2.2" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24">
+    <path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M12 7v5l3 1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-ban" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M6.5 6.5 17.5 17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-people" viewBox="0 0 24 24">
+    <path d="M8.5 12a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M15.5 13a3 3 0 1 0-2.6-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M3.5 19.5v-.8a4.7 4.7 0 0 1 4.7-4.7h1.6a4.7 4.7 0 0 1 4.7 4.7v.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M14 16h1c2.2 0 4 1.8 4 4v.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-smile" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M9 10a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0Z" fill="currentColor" />
+    <path d="M16.8 10a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0Z" fill="currentColor" />
+    <path d="M8.5 14a3.9 3.9 0 0 0 6.93 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-support" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M7.9 7.9 5.7 5.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M18.3 18.3 16.1 16.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M16.1 7.9 18.3 5.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M5.7 18.3 7.9 16.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24">
+    <path d="M5 5.5h7.5a2.5 2.5 0 0 1 2.5 2.5v11H7.5A2.5 2.5 0 0 0 5 16V5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M19 5.5h-7.5A2.5 2.5 0 0 0 9 8v11h7.5A2.5 2.5 0 0 1 19 16V5.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+    <path d="M9 8h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+  </symbol>
+  <symbol id="icon-sparkle" viewBox="0 0 24 24">
+    <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5Z" fill="currentColor" />
+    <path d="M6 15l.9 2.6 2.6.9-2.6.9L6 22l-.9-2.6L2.5 18.5l2.6-.9Z" fill="currentColor" />
+    <path d="M17.5 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7Z" fill="currentColor" />
+  </symbol>
+  <symbol id="icon-cards" viewBox="0 0 24 24">
+    <rect x="6" y="5" width="11" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <rect x="9" y="7" width="11" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+  </symbol>
+  <symbol id="icon-strategy" viewBox="0 0 24 24">
+    <circle cx="7" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="17" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <circle cx="12" cy="17" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M8.8 8.5l2.4 5.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M15.2 8.5l-2.4 5.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+    <path d="M9.5 7h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+  </symbol>
+</svg>
+
+
     <div class="stars-bg" id="starsBg"></div>
 
     <header>
         <div class="header-container">
-            <div class="logo">⭐ Lucky Stars Casino</div>
-            <nav>
+            <a href="index.html" class="logo" aria-label="Social Casino Games Place home">
+                <img src="logo.png" alt="Social Casino Games Place">
+            </a>            <nav>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="features.html">Features ▾</a>
+                        <a href="features.html">Features &#9662;</a>
                         <div class="dropdown-content">
                             <a href="daily-bonuses.html">Daily Bonuses</a>
                             <a href="free-spins.html">Free Spins</a>
@@ -765,7 +1039,7 @@
                     <span></span>
                 </div>
             </nav>
-            <a href="index.html" class="back-home">🏠 Home</a>
+            <a href="index.html" class="back-home">Home</a>
         </div>
     </header>
 
@@ -813,33 +1087,33 @@
 
             <div class="contact-info">
                 <div class="info-item">
-                    <div class="info-icon">📧</div>
+                    <div class="info-icon icon-badge" aria-hidden="true"><svg class="icon-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-mail"></use></svg></div>
                     <h3>Email</h3>
                     <p>
-                        <a href="mailto:nurlanmammadli2@gmail.com">nurlanmammadli2@gmail.com</a>
+                        <a href="mailto:support@theraphyplace.com">support@theraphyplace.com</a>
                     </p>
                     <p>We typically respond within 24 hours.</p>
                 </div>
 
                 <div class="info-item">
-                    <div class="info-icon">💼</div>
+                    <div class="info-icon icon-badge" aria-hidden="true"><svg class="icon-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-network"></use></svg></div>
                     <h3>LinkedIn</h3>
                     <p>
-                        <a href="https://www.linkedin.com/in/nurlan-məmmədli-b6a55b308" target="_blank" rel="noopener noreferrer">
-                            Nurlan Məmmədli
+                        <a href="https://www.linkedin.com/company/theraphy-place-casino" target="_blank" rel="noopener noreferrer">
+                            Social Casino Games Place
                         </a>
                     </p>
                     <p>Connect with us on LinkedIn for updates and news.</p>
                 </div>
 
                 <div class="info-item">
-                    <div class="info-icon">⏰</div>
+                    <div class="info-icon icon-badge" aria-hidden="true"><svg class="icon-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-info"></use></svg></div>
                     <h3>Response Time</h3>
                     <p>We aim to respond to all inquiries within 24-48 hours during business days.</p>
                 </div>
 
                 <div class="info-item">
-                    <div class="info-icon">🆘</div>
+                    <div class="info-icon icon-badge" aria-hidden="true"><svg class="icon-symbol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-support"></use></svg></div>
                     <h3>Need Immediate Help?</h3>
                     <p>Check out our <a href="help.html">Help Center</a> for quick answers to common questions.</p>
                 </div>
@@ -851,8 +1125,8 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>How do I get started with Lucky Stars Casino?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>How do I get started with Social Casino Games Place?</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
@@ -863,12 +1137,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Is Lucky Stars Casino free to play?</span>
-                        <span class="faq-icon">▼</span>
+                        <span>Is Social Casino Games Place free to play?</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Yes! Lucky Stars Casino is completely free to play. We are a demo social casino platform, which means no real money is involved. All games use virtual coins that you can earn through daily bonuses, rewards, and gameplay.
+                            Yes! Social Casino Games Place is completely free to play. We are a demo social casino platform, which means no real money is involved. All games use virtual coins that you can earn through daily bonuses, rewards, and gameplay.
                         </div>
                     </div>
                 </div>
@@ -876,7 +1150,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How do I earn more coins?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
@@ -888,11 +1162,11 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Can I win real money?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            No, Lucky Stars Casino is a demo social casino platform. No real money is involved, and you cannot win or lose real money. This platform is designed for entertainment and educational purposes only.
+                            No, Social Casino Games Place is a demo social casino platform. No real money is involved, and you cannot win or lose real money. This platform is designed for entertainment and educational purposes only.
                         </div>
                     </div>
                 </div>
@@ -900,7 +1174,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How do I join tournaments?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
@@ -912,7 +1186,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What is the VIP program?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
@@ -924,7 +1198,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Is my personal information safe?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
@@ -936,11 +1210,11 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How can I contact support?</span>
-                        <span class="faq-icon">▼</span>
+                        <span class="faq-icon">&#9660;</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            You can contact us through this contact form, or email us directly at nurlanmammadli2@gmail.com. You can also visit our Help Center for answers to common questions and troubleshooting guides.
+                            You can contact us through this contact form, or email us directly at support@theraphyplace.com. You can also visit our Help Center for answers to common questions and troubleshooting guides.
                         </div>
                     </div>
                 </div>
@@ -1008,9 +1282,13 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Lucky Stars Casino. All rights reserved.</p>
-                <p>This is a demo social casino platform. No real money gambling. For entertainment purposes only.</p>
+            <div class="footer-disclaimer" role="note">
+                <p><strong>18+</strong> Social Casino Games Place is intended for players aged 18 and over. Please play responsibly and keep your gaming fun.</p>
+                <p><strong>Australia Support:</strong> Gambling Help Online - <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener noreferrer">gamblinghelponline.org.au</a> | 24/7 Helpline: 1800 858 858</p>
+                <p><strong>Additional Helplines:</strong> Lifeline Australia 13 11 14 | Beyond Blue 1300 224 636</p>
+            </div>            <div class="footer-bottom">
+                <p>&copy; 2025 Social Casino Games Place. All rights reserved. <a href="https://theraphyplace.com" target="_blank" rel="noopener noreferrer">theraphyplace.com</a></p>
+                <p>This is a demo social casino experience for Australia. No real money gambling. Virtual coins only.</p>
             </div>
         </div>
     </footer>
@@ -1137,4 +1415,19 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

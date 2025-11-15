@@ -1,10 +1,10 @@
-# ⭐ Lucky Stars Casino - Social Casino Platform
+# 🌿 Theraphy Place Casino - Social Casino Platform
 
-![Lucky Stars Casino](https://via.placeholder.com/1200x400/6B46C1/F59E0B?text=Lucky+Stars+Casino+-+Social+Casino+Demo)
+![Theraphy Place Casino](https://via.placeholder.com/1200x400/2563EB/34D399?text=Theraphy+Place+Casino+-+Social+Casino)
 
 ## 🌟 Project Overview
 
-**Lucky Stars Casino** is a professional, responsive social casino gaming website featuring a stunning purple, gold, and dark navy color scheme. This demo platform provides a safe, risk-free environment for users to experience casino-style games without any financial risk.
+**Theraphy Place Casino** is a professional, responsive social casino gaming website featuring a refined midnight navy, royal purple, and coastal gold color scheme. This demo platform provides a safe, risk-free environment for players across Australia to experience casino-style games without any financial risk.
 
 ### ✨ Key Features
 
@@ -14,7 +14,7 @@
 - 🎯 **Zero Financial Risk** - Demo platform with virtual currency only
 - 🔒 **Safe & Educational** - Learn casino games without losing money
 - ⚡ **Modern UI/UX** - Smooth animations, interactive elements, and contemporary design
-- 🌐 **Complete Website** - 12 responsive pages with all essential features
+- 🌐 **Complete Website** - 15 responsive pages with all essential features
 - 📦 **All-in-One Files** - Each HTML file contains embedded CSS and JavaScript
 
 ---
@@ -27,9 +27,12 @@
 ├── index.html              # Homepage with hero, animated slots, featured games, statistics, testimonials
 ├── games.html              # Games page (Coming Soon section)
 ├── features.html           # Platform benefits, free coins system, daily rewards
-├── tournaments.html         # Active tournaments, leaderboards, prize pools
+├── daily-bonuses.html      # Daily bonuses page (dedicated page)
+├── free-spins.html         # Free spins page (dedicated page)
+├── vip-rewards.html        # VIP rewards page (dedicated page)
+├── tournaments.html        # Active tournaments, leaderboards, prize pools
 ├── vip.html                # VIP tiers, loyalty program, exclusive benefits
-├── about.html              # Company story and developer information
+├── about.html              # Company story and mission
 ├── contact.html            # Contact form with validation, FAQ accordion
 ├── responsible-gaming.html # Self-assessment tools, gaming tips
 ├── terms.html              # Terms of Service
@@ -43,7 +46,14 @@
 
 #### 🏠 **index.html** - Homepage
 - Hero section with animated slot machine
-- Featured games grid with hover effects
+- Featured games grid with hover effects:
+  - Classic Slots (gem icon)
+  - Poker Games (spade icon)
+  - Dice Games (dice-d20 icon)
+  - Blackjack (heart icon)
+  - Wheel of Fortune (circle-notch icon)
+  - Bingo (grid icon)
+- Optimized icon sizes (fa-2x) for better visual balance
 - Statistics counter with animation
 - Testimonials carousel slider
 - Complete navigation and footer
@@ -56,8 +66,22 @@
 #### 🎁 **features.html** - Features
 - Platform benefits showcase
 - Free coins system explanation
-- Daily bonuses and rewards schedule
-- Free spins information
+- Links to dedicated pages for bonuses and rewards
+
+#### 🎁 **daily-bonuses.html** - Daily Bonuses
+- Dedicated page for daily bonuses
+- Bonus schedule and information
+- Claim bonuses functionality
+
+#### 🎰 **free-spins.html** - Free Spins
+- Dedicated page for free spins
+- Free spins information and availability
+- Claim free spins functionality
+
+#### ⭐ **vip-rewards.html** - VIP Rewards
+- Dedicated page for VIP rewards
+- VIP rewards program details
+- Exclusive benefits showcase
 
 #### 🏆 **tournaments.html** - Tournaments
 - Active tournaments grid
@@ -72,11 +96,8 @@
 
 #### 👤 **about.html** - About Us
 - Company story and mission
-- Developer information:
-  - **Name:** Nurlan Mammadli
-  - **Title:** Frontend Developer
-  - **Email:** nurlanmammadli2@gmail.com
-  - **LinkedIn:** www.linkedin.com/in/nurlan-məmmədli-b6a55b308
+- Mission & Vision section
+- Platform statistics
 
 #### 📧 **contact.html** - Contact
 - Contact form with full validation
@@ -129,6 +150,8 @@
 - 📱 Mobile hamburger menu
 - 📋 FAQ accordion
 - ✅ Form validation
+- 🔗 Professional social media icons with hover effects
+- 🎮 Featured games with optimized icon sizes
 
 ---
 
@@ -147,6 +170,10 @@ The website is fully responsive and optimized for:
 - Responsive typography
 - Mobile-optimized navigation
 - Touch-friendly buttons and links
+- Optimized footer for mobile devices
+- Responsive social media icons
+- Content overflow protection
+- Edge-to-edge responsive design
 
 ---
 
@@ -168,13 +195,14 @@ The website is fully responsive and optimized for:
 
 ### Navigation
 - Sticky header with smooth scrolling
-- Dropdown menu under "Features" with:
-  - Daily Bonuses
-  - Free Spins
-  - Tournaments
-  - VIP Rewards
+- Dropdown menu under "Features" with links to dedicated pages:
+  - Daily Bonuses (daily-bonuses.html)
+  - Free Spins (free-spins.html)
+  - Tournaments (tournaments.html)
+  - VIP Rewards (vip-rewards.html)
 - Mobile hamburger menu
 - Back to home button on all pages
+- Fully clickable footer links
 
 ### Footer
 - 4-column layout with:
@@ -182,8 +210,11 @@ The website is fully responsive and optimized for:
   - Information
   - Legal
   - Connect With Us
-- Social media icons
+- Professional SVG social media icons (Facebook, Twitter, Instagram, YouTube)
+- Centered icons with proper hover effects
 - Newsletter signup form
+- Fully clickable links and buttons
+- Responsive design for all screen sizes
 
 ### Animations
 - Animated stars background
@@ -201,15 +232,6 @@ The website is fully responsive and optimized for:
 
 ---
 
-## 💻 Developer Information
-
-**Frontend Developer:** Nurlan Mammadli
-
-- **Email:** nurlanmammadli2@gmail.com
-- **LinkedIn:** [www.linkedin.com/in/nurlan-məmmədli-b6a55b308](https://www.linkedin.com/in/nurlan-məmmədli-b6a55b308)
-
----
-
 ## 📝 Important Notes
 
 ### Demo Platform
@@ -218,12 +240,14 @@ The website is fully responsive and optimized for:
 - **No gambling** occurs on this platform
 - All games use **virtual coins** only
 - For **entertainment and educational purposes only**
+- Target audience: **Players in Australia aged 18+**
 
 ### Responsible Gaming
 - This platform promotes responsible gaming
 - No real money transactions
 - Educational content about gaming
 - Self-assessment tools available
+- Australia support resources: Gambling Help Online (1800 858 858), Lifeline (13 11 14), Beyond Blue (1300 224 636)
 
 ---
 
@@ -254,20 +278,30 @@ This project is created for educational and demonstration purposes.
 ## 🤝 Contact
 
 For questions, feedback, or support:
-- **Email:** nurlanmammadli2@gmail.com
-- **LinkedIn:** [Nurlan Məmmədli](https://www.linkedin.com/in/nurlan-məmmədli-b6a55b308)
+- **Email:** support@theraphyplace.com
+- **Website:** [theraphyplace.com](https://theraphyplace.com)
+- **Helpline (Australia):** 1800 858 858 (Gambling Help Online)
 
 ---
 
 ## 🎉 Thank You
 
-Thank you for visiting Lucky Stars Casino! Enjoy your gaming experience in our safe, demo environment.
+Thank you for visiting Theraphy Place Casino! Enjoy your gaming experience in our safe, demo environment tailored for Australia.
 
 **Remember:** This is a demo platform. Play responsibly and have fun!
 
 ---
 
-**Last Updated:** January 2025
+**Last Updated:** November 2025
 
-**Version:** 1.0.0
+**Version:** 2.0.0
+
+### Recent Updates (v2.0.0)
+- ✅ Rebranded platform to Theraphy Place Casino (Australia focus)
+- ✅ Updated domain, contact information, and support channels
+- ✅ Introduced new header logo with custom SVG icon
+- ✅ Added 18+ disclaimer and Australian helplines to footers
+- ✅ Refined responsive footers and accessibility states
+- ✅ Replaced remaining placeholder icons with bespoke SVG assets
+- ✅ Updated documentation to reflect new brand direction
 
