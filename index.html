@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Casino Games Place - Free Social Casino Games</title>
+    <title>Therapy Place Social Casino Games Platform - Free Social Casino Games</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -1000,9 +1000,118 @@
         .list-bullet.gold { color: #fbbf24; }
         .list-bullet.platinum { color: #60a5fa; }
         .list-bullet.diamond { color: #38bdf8; }
+
+        /* Age Verification Modal */
+        .age-modal, .cookie-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .age-modal.active, .cookie-modal.active {
+            display: flex;
+        }
+
+        .age-modal-content, .cookie-modal-content {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-purple) 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+        }
+
+        .age-modal-content h2, .cookie-modal-content h2 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .age-modal-content p, .cookie-modal-content p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .age-modal-buttons, .cookie-modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .age-btn, .cookie-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .age-btn-yes {
+            background: linear-gradient(45deg, var(--gold), #FFD700);
+            color: var(--dark-navy);
+        }
+
+        .age-btn-no {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .cookie-btn-accept {
+            background: linear-gradient(45deg, var(--gold), #FFD700);
+            color: var(--dark-navy);
+        }
+
+        .cookie-btn-decline {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .age-btn:hover, .cookie-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+        }
 </style>
 </head>
 <body>
+    <!-- Age Verification Modal -->
+    <div id="ageModal" class="age-modal active">
+        <div class="age-modal-content">
+            <h2>🔞 Age Verification</h2>
+            <p>You must be 18 years or older to access this social casino games platform. This platform is for entertainment purposes only. Virtual coins only.</p>
+            <p><strong>Are you 18 years or older?</strong></p>
+            <div class="age-modal-buttons">
+                <button class="age-btn age-btn-yes" onclick="verifyAge(true)">Yes, I am 18+</button>
+                <button class="age-btn age-btn-no" onclick="verifyAge(false)">No, I am under 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Policy Modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <h2>🍪 Cookie Policy</h2>
+            <p>We use cookies to enhance your experience, analyze site usage, and assist in our marketing efforts. By clicking "Accept", you consent to our use of cookies.</p>
+            <p>You can learn more about our cookie policy in our <a href="privacy.html" style="color: var(--gold);">Privacy Policy</a>.</p>
+            <div class="cookie-modal-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
   <symbol id="icon-gift" viewBox="0 0 24 24">
     <rect x="3.5" y="10" width="17" height="11" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
@@ -1195,8 +1304,8 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo" aria-label="Social Casino Games Place home">
-                <img src="logo.png" alt="Social Casino Games Place">
+            <a href="index.html" class="logo" aria-label="Therapy Place Social Casino Games Platform home">
+                <img src="logo.png" alt="Therapy Place Social Casino Games Platform">
             </a>
             <nav>
                 <ul class="nav-menu" id="navMenu">
@@ -1230,8 +1339,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Social Casino Games Place</h1>
-            <p>Australia's trusted social casino &ndash; enjoy immersive games with virtual coins only. 100% free, 18+ and play responsibly.</p>
+            <h1>Welcome to Therapy Place Social Casino Games Platform</h1>
+            <p>New Zealand's trusted social casino games platform &ndash; enjoy immersive games with virtual coins only. 100% free, 18+ and play responsibly.</p>
             
             <!-- Animated Slot Machine -->
             <div class="slot-machine">
@@ -1319,12 +1428,12 @@
         <div class="testimonials-slider">
             <div class="testimonial-card active">
                 <img src="images/testimonials/image.png" alt="Sarah Johnson" class="testimonial-avatar">
-                <p class="testimonial-text">"Social Casino Games Place is the perfect place to enjoy casino games without any risk. The graphics are amazing and the gameplay is smooth!"</p>
+                <p class="testimonial-text">"Therapy Place Social Casino Games Platform is the perfect place to enjoy free social games without any risk. The graphics are amazing and the gameplay is smooth!"</p>
                 <p class="testimonial-author">- Sarah Johnson</p>
             </div>
             <div class="testimonial-card">
                 <img src="images/testimonials/image.png" alt="Michael Chen" class="testimonial-avatar">
-                <p class="testimonial-text">"I love the daily bonuses and free spins. It's a great way to have fun without spending real money. Highly recommended!"</p>
+                <p class="testimonial-text">"I love the daily bonuses and free spins. It's a great way to have fun with virtual coins only. Highly recommended!"</p>
                 <p class="testimonial-author">- Michael Chen</p>
             </div>
             <div class="testimonial-card">
@@ -1334,7 +1443,7 @@
             </div>
             <div class="testimonial-card">
                 <img src="images/testimonials/image.png" alt="David Brown" class="testimonial-avatar">
-                <p class="testimonial-text">"As someone who wanted to learn casino games, this platform is perfect. It's educational and entertaining at the same time."</p>
+                <p class="testimonial-text">"As someone who wanted to learn social games, this platform is perfect. It's educational and entertaining at the same time."</p>
                 <p class="testimonial-author">- David Brown</p>
             </div>
             <div class="slider-controls">
@@ -1408,13 +1517,14 @@
                 </div>
             </div>
             <div class="footer-disclaimer" role="note">
-                <p><strong>18+</strong> Social Casino Games Place is intended for players aged 18 and over. Please play responsibly and keep your gaming fun.</p>
-                <p><strong>Australia Support:</strong> Gambling Help Online - <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener noreferrer">gamblinghelponline.org.au</a> | 24/7 Helpline: 1800 858 858</p>
-                <p><strong>Additional Helplines:</strong> Lifeline Australia 13 11 14 | Beyond Blue 1300 224 636</p>
+                <p><strong>18+</strong> Therapy Place Social Casino Games Platform is intended for players aged 18 and over. Please play responsibly and keep your gaming fun.</p>
+                <p><strong>New Zealand Support:</strong> Problem Gambling Foundation - <a href="https://www.pgf.nz" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: underline;">pgf.nz</a> | 24/7 Helpline: 0800 654 655</p>
+                <p><strong>Additional Helplines:</strong> Gambling Helpline 0800 654 655 | Lifeline 0800 543 354 | Healthline 0800 611 116</p>
+                <p><strong>Disclaimer:</strong> This is a demo social casino games platform. Virtual coins only. For entertainment purposes only.</p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Social Casino Games Place. All rights reserved. <a href="https://theraphyplace.com" target="_blank" rel="noopener noreferrer">theraphyplace.com</a></p>
-                <p>This is a demo social casino experience for Australia. No real money gambling. Virtual coins only.</p>
+                <p>&copy; 2025 Therapy Place Social Casino Games Platform. All rights reserved.</p>
+                <p>This is a demo social casino games platform for New Zealand. Virtual coins only.</p>
             </div>
         </div>
     </footer>
@@ -1556,6 +1666,54 @@
 
         // Initialize stars on load
         createStars();
+
+        // Age Verification
+        function verifyAge(isAdult) {
+            const ageModal = document.getElementById('ageModal');
+            if (isAdult) {
+                ageModal.classList.remove('active');
+                localStorage.setItem('ageVerified', 'true');
+                // Show cookie modal after age verification
+                setTimeout(() => {
+                    if (!localStorage.getItem('cookiesAccepted')) {
+                        showCookieModal();
+                    }
+                }, 500);
+            } else {
+                alert('You must be 18 years or older to access this platform.');
+                window.location.href = 'https://www.google.com';
+            }
+        }
+
+        // Cookie Policy
+        function showCookieModal() {
+            const cookieModal = document.getElementById('cookieModal');
+            cookieModal.classList.add('active');
+        }
+
+        function acceptCookies() {
+            const cookieModal = document.getElementById('cookieModal');
+            cookieModal.classList.remove('active');
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        function declineCookies() {
+            const cookieModal = document.getElementById('cookieModal');
+            cookieModal.classList.remove('active');
+            localStorage.setItem('cookiesAccepted', 'declined');
+        }
+
+        // Check if age is already verified
+        window.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('ageVerified') === 'true') {
+                document.getElementById('ageModal').classList.remove('active');
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    setTimeout(() => {
+                        showCookieModal();
+                    }, 500);
+                }
+            }
+        });
     </script>
 </body>
 </html>

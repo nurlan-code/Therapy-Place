@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games - Social Casino Games Place</title>
+    <title>Games - Therapy Place Social Casino Games Platform</title>
     <style>
         * {
             margin: 0;
@@ -268,8 +268,8 @@
         }
 
         .game-icon {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             margin: 0 auto 1.5rem;
             background: rgba(107, 70, 193, 0.3);
             border: 2px solid var(--gold);
@@ -278,11 +278,19 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .game-card:hover .game-icon {
             transform: scale(1.1) rotate(5deg);
             background: rgba(245, 158, 11, 0.2);
+        }
+
+        .game-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
         }
 
         .game-icon svg {
@@ -1296,6 +1304,16 @@
     <path d="M15.2 8.5l-2.4 5.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
     <path d="M9.5 7h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
   </symbol>
+  <symbol id="icon-diamond" viewBox="0 0 24 24">
+    <path d="M12 3l4 7h6l-4 7-4 7-4-7-4-7h6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="icon-bingo" viewBox="0 0 24 24">
+    <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
+    <path d="M4 8h16M4 12h16M4 16h16M8 4v16M12 4v16M16 4v16" stroke="currentColor" stroke-width="1.2" />
+  </symbol>
 </svg>
 
 
@@ -1305,8 +1323,8 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo" aria-label="Social Casino Games Place home">
-                <img src="logo.png" alt="Social Casino Games Place">
+            <a href="index.html" class="logo" aria-label="Therapy Place Social Casino Games Platform home">
+                <img src="logo.png" alt="Therapy Place Social Casino Games Platform">
             </a>            <nav>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html">Home</a></li>
@@ -1340,53 +1358,63 @@
     <main class="main-content">
         <div class="games-container">
             <div class="games-header">
-                <h1 class="games-title">🎮 Oyunlar</h1>
-                <p class="games-subtitle">4 maraqlı və funksional oyunumuzdan seçim edin və əyləncəli vaxt keçirin!</p>
+                <h1 class="games-title">🎮 Games</h1>
+                <p class="games-subtitle">Choose from our 6 exciting free games and have fun!</p>
             </div>
 
             <div class="games-grid">
                 <div class="game-card">
                     <div class="game-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use href="#icon-slot"></use>
-                        </svg>
-                </div>
-                    <h3 class="game-name">Classic Slots</h3>
-                    <p class="game-description">Klassik slot maşınları ilə müasir qrafika. Böyük qazanclar üçün çarxları döndürün!</p>
-                    <button class="play-button" onclick="openGame('slots')">Oyna</button>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use href="#icon-cards"></use>
-                        </svg>
-                </div>
-                    <h3 class="game-name">Blackjack</h3>
-                    <p class="game-description">Diləri məğlub edin! 21-ə yaxınlaşın və böyük qazanclar əldə edin.</p>
-                    <button class="play-button" onclick="openGame('blackjack')">Oyna</button>
-                </div>
-
-                <div class="game-card">
-                    <div class="game-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use href="#icon-controller"></use>
-                        </svg>
-                </div>
-                    <h3 class="game-name">Roulette</h3>
-                    <p class="game-description">Klassik rulet oyunu. Rəng və nömrələrə mərc edin və qazanın!</p>
-                    <button class="play-button" onclick="openGame('roulette')">Oyna</button>
-            </div>
-
-                <div class="game-card">
-                    <div class="game-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use href="#icon-wheel"></use>
-                        </svg>
+                        <img src="images/games/classic.png" alt="Free Classic Slots">
                     </div>
-                    <h3 class="game-name">Lucky Wheel</h3>
-                    <p class="game-description">Şans çarxını döndürün və böyük mükafatlar qazanın! Hər döngə yeni imkanlar!</p>
-                    <button class="play-button" onclick="openGame('luckywheel')">Oyna</button>
+                    <h3 class="game-name">Free Classic Slots</h3>
+                    <p class="game-description">Experience traditional slot machines with modern twists</p>
+                    <button class="play-button" onclick="openGame('slots')">Play</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">
+                        <img src="images/games/poker.png" alt="Free Poker Games">
+                    </div>
+                    <h3 class="game-name">Free Poker Games</h3>
+                    <p class="game-description">Test your skills in various poker variations</p>
+                    <button class="play-button" onclick="openGame('poker')">Play</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">
+                        <img src="images/games/dice.png" alt="Free Dice Games">
+                    </div>
+                    <h3 class="game-name">Free Dice Games</h3>
+                    <p class="game-description">Roll the dice and try your luck</p>
+                    <button class="play-button" onclick="openGame('dice')">Play</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">
+                        <img src="images/games/blackjack.png" alt="Free Blackjack">
+                    </div>
+                    <h3 class="game-name">Free Blackjack</h3>
+                    <p class="game-description">Beat the dealer in this classic card game</p>
+                    <button class="play-button" onclick="openGame('blackjack')">Play</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">
+                        <img src="images/games/fotune.png" alt="Free Wheel of Fortune">
+                    </div>
+                    <h3 class="game-name">Free Wheel of Fortune</h3>
+                    <p class="game-description">Spin the wheel for exciting prizes</p>
+                    <button class="play-button" onclick="openGame('luckywheel')">Play</button>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon">
+                        <img src="images/games/bingo.png" alt="Free Bingo">
+                    </div>
+                    <h3 class="game-name">Free Bingo</h3>
+                    <p class="game-description">Join the fun with exciting bingo games</p>
+                    <button class="play-button" onclick="openGame('bingo')">Play</button>
                 </div>
             </div>
         </div>
@@ -1462,12 +1490,13 @@
                 </div>
             </div>
             <div class="footer-disclaimer" role="note">
-                <p><strong>18+</strong> Social Casino Games Place is intended for players aged 18 and over. Please play responsibly and keep your gaming fun.</p>
-                <p><strong>Australia Support:</strong> Gambling Help Online - <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener noreferrer">gamblinghelponline.org.au</a> | 24/7 Helpline: 1800 858 858</p>
-                <p><strong>Additional Helplines:</strong> Lifeline Australia 13 11 14 | Beyond Blue 1300 224 636</p>
+                <p><strong>18+</strong> Therapy Place Social Casino Games Platform is intended for players aged 18 and over. Please play responsibly and keep your gaming fun.</p>
+                <p><strong>New Zealand Support:</strong> Problem Gambling Foundation - <a href="https://www.pgf.nz" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: underline;">pgf.nz</a> | 24/7 Helpline: 0800 654 655</p>
+                <p><strong>Additional Helplines:</strong> Gambling Helpline 0800 654 655 | Lifeline 0800 543 354 | Healthline 0800 611 116</p>
+                <p><strong>Disclaimer:</strong> This is a demo social casino games platform. Virtual coins only. For entertainment purposes only.</p>
             </div>            <div class="footer-bottom">
-                <p>&copy; 2025 Social Casino Games Place. All rights reserved. <a href="https://theraphyplace.com" target="_blank" rel="noopener noreferrer">theraphyplace.com</a></p>
-                <p>This is a demo social casino experience for Australia. No real money gambling. Virtual coins only.</p>
+                <p>&copy; 2025 Therapy Place Social Casino Games Platform. All rights reserved.</p>
+                <p>This is a demo social casino games platform for New Zealand. Virtual coins only.</p>
             </div>
         </div>
     </footer>
@@ -1544,49 +1573,49 @@
             switch(gameType) {
                 case 'slots':
                     gameArea.innerHTML = `
-                        <h2 class="game-title">🎰 Classic Slots</h2>
-                        <div class="game-balance">Balans: ${gameBalance} 💰</div>
+                        <h2 class="game-title">🎰 Free Classic Slots</h2>
+                        <div class="game-balance">Balance: ${gameBalance} 💰</div>
                         <div class="slot-machine">
                             <div class="slot-reel" id="reel1">🍒</div>
                             <div class="slot-reel" id="reel2">🍋</div>
                             <div class="slot-reel" id="reel3">🍊</div>
                         </div>
                         <div class="result-message" id="slotResult"></div>
-                        <button class="game-button" onclick="spinSlots()">Çarxı Döndür (10💰)</button>
+                        <button class="game-button" onclick="spinSlots()">Spin (10💰)</button>
                     `;
                     break;
                 case 'blackjack':
                     gameArea.innerHTML = `
-                        <h2 class="game-title">🃏 Blackjack</h2>
-                        <div class="game-balance">Balans: ${gameBalance} 💰</div>
+                        <h2 class="game-title">🃏 Free Blackjack</h2>
+                        <div class="game-balance">Balance: ${gameBalance} 💰</div>
                         <div style="margin: 1rem 0;">
-                            <strong>Dilər: <span id="dealerScore">0</span></strong>
+                            <strong>Dealer: <span id="dealerScore">0</span></strong>
                             <div class="cards-container" id="dealerCards"></div>
                         </div>
                         <div style="margin: 1rem 0;">
-                            <strong>Siz: <span id="playerScore">0</span></strong>
+                            <strong>You: <span id="playerScore">0</span></strong>
                             <div class="cards-container" id="playerCards"></div>
                         </div>
                         <div class="result-message" id="blackjackResult"></div>
-                        <button class="game-button" onclick="dealBlackjack()">Başla (25💰)</button>
-                        <button class="game-button" onclick="hitBlackjack()" id="hitBtn" disabled>Kart Al</button>
-                        <button class="game-button" onclick="standBlackjack()" id="standBtn" disabled>Dayan</button>
+                        <button class="game-button" onclick="dealBlackjack()">Start (25💰)</button>
+                        <button class="game-button" onclick="hitBlackjack()" id="hitBtn" disabled>Hit</button>
+                        <button class="game-button" onclick="standBlackjack()" id="standBtn" disabled>Stand</button>
                     `;
                     break;
                 case 'roulette':
                     gameArea.innerHTML = `
-                        <h2 class="game-title">🎰 Roulette</h2>
-                        <div class="game-balance">Balans: ${gameBalance} 💰</div>
+                        <h2 class="game-title">🎰 Free Roulette</h2>
+                        <div class="game-balance">Balance: ${gameBalance} 💰</div>
                         <div class="roulette-table" id="rouletteTable"></div>
                         <div class="result-message" id="rouletteResult"></div>
-                        <button class="game-button" onclick="spinRoulette()">Döndür (30💰)</button>
+                        <button class="game-button" onclick="spinRoulette()">Spin (30💰)</button>
                     `;
                     initRoulette();
                     break;
                 case 'luckywheel':
                     gameArea.innerHTML = `
-                        <h2 class="game-title">🎡 Lucky Wheel</h2>
-                        <div class="game-balance">Balans: ${gameBalance} 💰</div>
+                        <h2 class="game-title">🎡 Free Lucky Wheel</h2>
+                        <div class="game-balance">Balance: ${gameBalance} 💰</div>
                         <div class="wheel-container">
                             <div class="wheel-pointer"></div>
                             <div class="wheel" id="luckyWheel">
@@ -1602,7 +1631,7 @@
                             </div>
                         </div>
                         <div class="result-message" id="luckyWheelResult"></div>
-                        <button class="game-button" onclick="spinLuckyWheel()">🎡 Çarxı Döndür (30💰)</button>
+                        <button class="game-button" onclick="spinLuckyWheel()">🎡 Spin Wheel (30💰)</button>
                     `;
                     break;
             }
@@ -1615,7 +1644,7 @@
         // Slots Game
         function spinSlots() {
             if (gameBalance < 10) {
-                alert('Kifayət qədər balansınız yoxdur!');
+                alert('You don\'t have enough balance!');
                 return;
             }
             gameBalance -= 10;
@@ -1647,7 +1676,7 @@
             if (reel1 === reel2 && reel2 === reel3) {
                 const win = 100;
                 gameBalance += win;
-                result.textContent = `🎉 Qazandınız! ${win}💰`;
+                result.textContent = `🎉 You won! ${win}💰`;
                 result.style.color = '#00FF00';
             } else if (reel1 === reel2 || reel2 === reel3 || reel1 === reel3) {
                 const win = 30;
@@ -1655,7 +1684,7 @@
                 result.textContent = `🎊 2 eyni! ${win}💰`;
                 result.style.color = '#FFD700';
             } else {
-                result.textContent = 'Təəssüf, qazana bilmədiniz. Yenidən cəhd edin!';
+                result.textContent = 'Sorry, you didn\'t win. Try again!';
                 result.style.color = '#FF6B6B';
             }
             updateBalance();
@@ -1669,7 +1698,7 @@
 
         function dealBlackjack() {
             if (gameBalance < 25) {
-                alert('Kifayət qədər balansınız yoxdur!');
+                alert('You don\'t have enough balance!');
                 return;
             }
             gameBalance -= 25;
@@ -1695,7 +1724,7 @@
             updateBlackjackDisplay();
             
             if (getBlackjackScore(blackjackPlayerCards) > 21) {
-                endBlackjack('Siz uduzdunuz! 21-dən çox.');
+                endBlackjack('You lost! Over 21.');
             }
         }
 
@@ -1712,13 +1741,13 @@
             const dealerScore = getBlackjackScore(blackjackDealerCards);
             
             if (dealerScore > 21) {
-                endBlackjack('🎉 Dilər uduzdu! Siz qazandınız!', 50);
+                endBlackjack('🎉 Dealer lost! You won!', 50);
             } else if (playerScore > dealerScore) {
-                endBlackjack('🎉 Siz qazandınız!', 50);
+                endBlackjack('🎉 You won!', 50);
             } else if (playerScore === dealerScore) {
-                endBlackjack('Bərabərə!', 25);
+                endBlackjack('Tie!', 25);
             } else {
-                endBlackjack('Dilər qazandı.');
+                endBlackjack('Dealer won.');
             }
         }
 
@@ -1777,7 +1806,7 @@
         // Lucky Wheel Game
         function spinLuckyWheel() {
             if (gameBalance < 30) {
-                alert('Kifayət qədər balansınız yoxdur!');
+                alert('You don\'t have enough balance!');
                 return;
             }
             
@@ -1803,7 +1832,7 @@
                 const win = segmentValues[segmentIndex];
                 
                 gameBalance += win;
-                result.textContent = `🎉 ${win}💰 qazandınız!`;
+                result.textContent = `🎉 You won ${win}💰!`;
                 result.style.color = '#00FF00';
                 updateBalance();
             }, 3000);
@@ -1833,7 +1862,7 @@
             
             const redBtn = document.createElement('button');
             redBtn.className = 'game-button';
-            redBtn.textContent = 'Qırmızı';
+            redBtn.textContent = 'Red';
             redBtn.style.background = '#DC143C';
             redBtn.onclick = (e) => {
                 e.stopPropagation();
@@ -1842,7 +1871,7 @@
             
             const blackBtn = document.createElement('button');
             blackBtn.className = 'game-button';
-            blackBtn.textContent = 'Qara';
+            blackBtn.textContent = 'Black';
             blackBtn.style.background = '#000';
             blackBtn.onclick = (e) => {
                 e.stopPropagation();
@@ -1851,7 +1880,7 @@
             
             const greenBtn = document.createElement('button');
             greenBtn.className = 'game-button';
-            greenBtn.textContent = 'Yaşıl (0)';
+            greenBtn.textContent = 'Green (0)';
             greenBtn.style.background = '#228B22';
             greenBtn.onclick = () => selectRouletteNumber(null, 0);
             
@@ -1882,7 +1911,7 @@
             selectedRouletteNumber = null;
             document.querySelectorAll('.roulette-number').forEach(c => c.classList.remove('selected'));
             document.querySelectorAll('.game-button').forEach(btn => {
-                if (btn.textContent === 'Qırmızı' || btn.textContent === 'Qara' || btn.textContent === 'Yaşıl (0)') {
+                if (btn.textContent === 'Red' || btn.textContent === 'Black' || btn.textContent === 'Green (0)') {
                     btn.style.border = '2px solid var(--purple)';
                 }
             });
@@ -1897,7 +1926,7 @@
             document.querySelectorAll('.roulette-number').forEach(c => c.classList.remove('selected'));
             if (cell) cell.classList.add('selected');
             document.querySelectorAll('.game-button').forEach(btn => {
-                if (btn.textContent === 'Qırmızı' || btn.textContent === 'Qara' || btn.textContent === 'Yaşıl (0)') {
+                if (btn.textContent === 'Red' || btn.textContent === 'Black' || btn.textContent === 'Green (0)') {
                     btn.style.border = '2px solid var(--purple)';
                 }
             });
@@ -1905,11 +1934,11 @@
 
         function spinRoulette() {
             if (gameBalance < 30) {
-                alert('Kifayət qədər balansınız yoxdur!');
+                alert('You don\'t have enough balance!');
                 return;
             }
             if (selectedRouletteNumber === null && selectedRouletteColor === null) {
-                alert('Zəhmət olmasa nömrə və ya rəng seçin!');
+                alert('Please select a number or color!');
                 return;
             }
             
@@ -1917,7 +1946,7 @@
             updateBalance();
             
             const result = document.getElementById('rouletteResult');
-            result.textContent = 'Döndürülür...';
+            result.textContent = 'Spinning...';
             
             setTimeout(() => {
                 const winningNumber = Math.floor(Math.random() * 37);
@@ -1926,14 +1955,14 @@
                 let win = 0;
                 if (selectedRouletteNumber !== null && winningNumber === selectedRouletteNumber) {
                     win = 350;
-                    result.textContent = `🎉 Qazandınız! ${win}💰 (Nömrə: ${winningNumber})`;
+                    result.textContent = `🎉 You won! ${win}💰 (Number: ${winningNumber})`;
                     result.style.color = '#00FF00';
                 } else if (selectedRouletteColor !== null && winningColor === selectedRouletteColor) {
                     win = 60;
-                    result.textContent = `🎉 Qazandınız! ${win}💰 (Rəng: ${winningColor === 'red' ? 'Qırmızı' : 'Qara'}, Nömrə: ${winningNumber})`;
+                    result.textContent = `🎉 You won! ${win}💰 (Color: ${winningColor === 'red' ? 'Red' : 'Black'}, Number: ${winningNumber})`;
                     result.style.color = '#00FF00';
                 } else {
-                    result.textContent = `Təəssüf! Qazanan: ${winningNumber} (${winningColor === 'red' ? 'Qırmızı' : winningColor === 'black' ? 'Qara' : 'Yaşıl'})`;
+                    result.textContent = `Sorry! Winner: ${winningNumber} (${winningColor === 'red' ? 'Red' : winningColor === 'black' ? 'Black' : 'Green'})`;
                     result.style.color = '#FF6B6B';
                 }
                 
@@ -1945,7 +1974,7 @@
                 selectedRouletteColor = null;
                 document.querySelectorAll('.roulette-number').forEach(c => c.classList.remove('selected'));
                 document.querySelectorAll('.game-button').forEach(btn => {
-                    if (btn.textContent === 'Qırmızı' || btn.textContent === 'Qara' || btn.textContent === 'Yaşıl (0)') {
+                    if (btn.textContent === 'Red' || btn.textContent === 'Black' || btn.textContent === 'Green (0)') {
                         btn.style.border = '2px solid var(--purple)';
                     }
                 });
@@ -1981,7 +2010,7 @@
 
         function updateBalance() {
             document.querySelectorAll('.game-balance').forEach(el => {
-                el.textContent = `Balans: ${gameBalance} 💰`;
+                el.textContent = `Balance: ${gameBalance} 💰`;
             });
         }
 

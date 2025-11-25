@@ -1,10 +1,10 @@
-# 🌿 Theraphy Place Casino - Social Casino Platform
+# 🌿 Therapy Place Social Casino Games Platform
 
-![Theraphy Place Casino](https://via.placeholder.com/1200x400/2563EB/34D399?text=Theraphy+Place+Casino+-+Social+Casino)
+![Therapy Place Social Casino Games Platform](https://via.placeholder.com/1200x400/2563EB/34D399?text=Therapy+Place+Social+Casino+Games+Platform)
 
 ## 🌟 Project Overview
 
-**Theraphy Place Casino** is a professional, responsive social casino gaming website featuring a refined midnight navy, royal purple, and coastal gold color scheme. This demo platform provides a safe, risk-free environment for players across Australia to experience casino-style games without any financial risk.
+**Therapy Place Social Casino Games Platform** is a professional, responsive social casino games platform featuring a refined midnight navy, royal purple, and coastal gold color scheme. This demo platform provides a safe, risk-free environment for players across New Zealand to experience social games without any financial risk.
 
 ### ✨ Key Features
 
@@ -240,14 +240,14 @@ The website is fully responsive and optimized for:
 - **No gambling** occurs on this platform
 - All games use **virtual coins** only
 - For **entertainment and educational purposes only**
-- Target audience: **Players in Australia aged 18+**
+- Target audience: **Players in New Zealand aged 18+**
 
 ### Responsible Gaming
 - This platform promotes responsible gaming
 - No real money transactions
 - Educational content about gaming
 - Self-assessment tools available
-- Australia support resources: Gambling Help Online (1800 858 858), Lifeline (13 11 14), Beyond Blue (1300 224 636)
+- New Zealand support resources: Problem Gambling Foundation (0800 654 655), Lifeline (0800 543 354), Healthline (0800 611 116)
 
 ---
 
@@ -278,15 +278,14 @@ This project is created for educational and demonstration purposes.
 ## 🤝 Contact
 
 For questions, feedback, or support:
-- **Email:** support@theraphyplace.com
-- **Website:** [theraphyplace.com](https://theraphyplace.com)
-- **Helpline (Australia):** 1800 858 858 (Gambling Help Online)
+- **Email:** admin@expertbests.com
+- **Helpline (New Zealand):** 0800 654 655 (Problem Gambling Foundation)
 
 ---
 
 ## 🎉 Thank You
 
-Thank you for visiting Theraphy Place Casino! Enjoy your gaming experience in our safe, demo environment tailored for Australia.
+Thank you for visiting Therapy Place Social Casino Games Platform! Enjoy your gaming experience in our safe, demo environment tailored for New Zealand.
 
 **Remember:** This is a demo platform. Play responsibly and have fun!
 
@@ -297,10 +296,10 @@ Thank you for visiting Theraphy Place Casino! Enjoy your gaming experience in ou
 **Version:** 2.0.0
 
 ### Recent Updates (v2.0.0)
-- ✅ Rebranded platform to Theraphy Place Casino (Australia focus)
+- ✅ Rebranded platform to Therapy Place Social Casino Games Platform (New Zealand focus)
 - ✅ Updated domain, contact information, and support channels
 - ✅ Introduced new header logo with custom SVG icon
-- ✅ Added 18+ disclaimer and Australian helplines to footers
+- ✅ Added 18+ disclaimer and New Zealand helplines to footers
 - ✅ Refined responsive footers and accessibility states
 - ✅ Replaced remaining placeholder icons with bespoke SVG assets
 - ✅ Updated documentation to reflect new brand direction
