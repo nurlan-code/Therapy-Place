@@ -1691,8 +1691,8 @@
                         <iframe 
                             id="gameFrame"
                             class="game-iframe"
-                            src="https://theraphyplace.com/casino/ContainerLauncher?pid=2&gid=thepayingpianoclub&lang=en_GB&practice=1&channel=desktop&demo=2"
-                            allow="fullscreen"
+                            src="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=thepayingpianoclub&lang=en_GB&practice=1&channel=desktop&demo=2"
+                            allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -2019,31 +2019,95 @@
         // Main Game Functions
         let gameLoaded = false;
 
-        // Handle iframe loading
+        // Handle iframe loading with better error detection
         const gameFrame = document.getElementById('gameFrame');
         if (gameFrame) {
-            gameFrame.addEventListener('load', function() {
-                setTimeout(() => {
-                    const loadingOverlay = document.getElementById('loadingOverlay');
-                    if (loadingOverlay) {
-                        loadingOverlay.style.display = 'none';
-                    }
-                    gameLoaded = true;
-                }, 2000); // Show loading for 2 seconds minimum
-            });
+            let loadTimeout;
+            let errorDetected = false;
 
-            // Handle iframe error
-            gameFrame.addEventListener('error', function() {
+            // Function to show game error
+            function showGameError(message) {
+                errorDetected = true;
                 const loadingOverlay = document.getElementById('loadingOverlay');
                 if (loadingOverlay) {
                     loadingOverlay.innerHTML = `
-                        <div style="text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠</div>
-                            <div style="color: #dc3545; font-size: 1.2rem; margin-bottom: 1rem;">Game Loading Error</div>
-                            <button onclick="refreshGame()" style="background: #ffd700; color: #000; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: bold;">Try Again</button>
+                        <div style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">⚠️</div>
+                            <div style="color: #dc3545; font-size: 1.3rem; margin-bottom: 1rem; font-weight: bold;">Game Loading Error</div>
+                            <div style="color: var(--text-light); font-size: 1rem; margin-bottom: 2rem; line-height: 1.6;">${message}</div>
+                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                <button onclick="refreshGame()" style="background: #ffd700; color: #000; border: none; padding: 12px 24px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: transform 0.3s;">🔄 Try Again</button>
+                                <button onclick="window.location.href='index.html'" style="background: rgba(107, 70, 193, 0.8); color: #fff; border: 2px solid #ffd700; padding: 12px 24px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: transform 0.3s;">🏠 Go Home</button>
+                            </div>
+                            <div style="margin-top: 2rem; color: var(--text-light); font-size: 0.9rem; opacity: 0.8;">
+                                <p>If the problem persists, please contact support:</p>
+                                <p><a href="mailto:admin@theraphyplace.com" style="color: #ffd700; text-decoration: none;">admin@theraphyplace.com</a></p>
+                            </div>
                         </div>
                     `;
+                    loadingOverlay.style.display = 'flex';
                 }
+            }
+
+            // Check if iframe loaded successfully
+            gameFrame.addEventListener('load', function() {
+                clearTimeout(loadTimeout);
+                
+                // Wait a bit then check for errors
+                setTimeout(() => {
+                    try {
+                        // Try to access iframe content to detect errors (CORS might block this)
+                        const iframeDoc = gameFrame.contentDocument || gameFrame.contentWindow.document;
+                        if (iframeDoc && iframeDoc.body) {
+                            const bodyText = iframeDoc.body.textContent || iframeDoc.body.innerText || '';
+                            
+                            // Check for common error indicators
+                            if (bodyText.includes('nginx') || bodyText.includes('403') || bodyText.includes('Forbidden') || bodyText.includes('Access Denied')) {
+                                showGameError('Game access restricted. The game provider may be blocking this domain. Please try again later or contact support.');
+                                return;
+                            }
+                            
+                            // If we get here, game loaded successfully
+                            const loadingOverlay = document.getElementById('loadingOverlay');
+                            if (loadingOverlay && !errorDetected) {
+                                loadingOverlay.style.display = 'none';
+                                gameLoaded = true;
+                            }
+                        } else {
+                            // Can't access iframe content (CORS), but assume it's loading
+                            setTimeout(() => {
+                                const loadingOverlay = document.getElementById('loadingOverlay');
+                                if (loadingOverlay && !errorDetected) {
+                                    loadingOverlay.style.display = 'none';
+                                    gameLoaded = true;
+                                }
+                            }, 3000);
+                        }
+                    } catch (e) {
+                        // CORS error - can't access iframe content, but it might still be loading
+                        // Hide loading after reasonable time
+                        setTimeout(() => {
+                            const loadingOverlay = document.getElementById('loadingOverlay');
+                            if (loadingOverlay && !errorDetected) {
+                                loadingOverlay.style.display = 'none';
+                                gameLoaded = true;
+                            }
+                        }, 3000);
+                    }
+                }, 2000);
+            });
+
+            // Set timeout for loading (10 seconds)
+            loadTimeout = setTimeout(() => {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                if (loadingOverlay && loadingOverlay.style.display !== 'none' && !errorDetected) {
+                    showGameError('Game is taking longer than expected to load. This might be due to network issues or the game server being temporarily unavailable. Please try again.');
+                }
+            }, 10000);
+
+            // Handle iframe error
+            gameFrame.addEventListener('error', function() {
+                showGameError('Failed to load game. Please check your internet connection and try again.');
             });
         }
 
