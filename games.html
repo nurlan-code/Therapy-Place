@@ -920,11 +920,15 @@
 
         .footer-content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
             justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
             padding: 0 1rem;
             width: 100%;
             box-sizing: border-box;
@@ -2259,18 +2263,26 @@
         `;
         document.head.appendChild(particleStyle);
 
-        // Add error handling for iframe
+        // Add error handling for iframe messages
         window.addEventListener('message', function(event) {
             // Handle messages from iframe if needed
             if (event.data && event.data.type === 'gameError') {
                 console.log('Game error:', event.data.message);
-                document.getElementById('loadingOverlay').innerHTML = `
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">⚠</div>
-                        <div style="color: #dc3545; font-size: 1.2rem; margin-bottom: 1rem;">Game Loading Error</div>
-                        <button onclick="refreshGame()" style="background: #ffd700; color: #000; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: bold;">Try Again</button>
-                    </div>
-                `;
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                if (loadingOverlay) {
+                    loadingOverlay.innerHTML = `
+                        <div style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">⚠️</div>
+                            <div style="color: #dc3545; font-size: 1.3rem; margin-bottom: 1rem; font-weight: bold;">Game Loading Error</div>
+                            <div style="color: var(--text-light); font-size: 1rem; margin-bottom: 2rem; line-height: 1.6;">${event.data.message || 'An error occurred while loading the game.'}</div>
+                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                                <button onclick="refreshGame()" style="background: #ffd700; color: #000; border: none; padding: 12px 24px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: transform 0.3s;">🔄 Try Again</button>
+                                <button onclick="window.location.href='index.html'" style="background: rgba(107, 70, 193, 0.8); color: #fff; border: 2px solid #ffd700; padding: 12px 24px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: transform 0.3s;">🏠 Go Home</button>
+                            </div>
+                        </div>
+                    `;
+                    loadingOverlay.style.display = 'flex';
+                }
             }
         });
 
